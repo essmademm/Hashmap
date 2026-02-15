@@ -157,7 +157,7 @@ public class Main {
 
 
 
-                // 1. Word Frequency Counter
+                // 12. Word Frequency Counter
                 String text1 = "Java is fun and Java is powerful and fun";
                 String[] words1 = text1.toLowerCase().split(" ");
                 HashMap<String, Integer> wordFreq = new HashMap<>();
@@ -168,7 +168,7 @@ public class Main {
                 System.out.println("1) Word frequency: " + wordFreq);
 
 
-                // 2. Character Frequency (letters only)
+                // 13. Character Frequency (letters only)
                 String text2 = "Mississippi";
                 HashMap<Character, Integer> charFreq = new HashMap<>();
 
@@ -190,7 +190,7 @@ public class Main {
                 System.out.println("Most frequent char: " + maxChar);
 
 
-                // 3. Group Words by Length
+                // 14. Group Words by Length
                 String[] arr3 = {"hi","book","java","sun","loop","map"};
                 HashMap<Integer, ArrayList<String>> lengthMap = new HashMap<>();
 
@@ -200,7 +200,7 @@ public class Main {
                 System.out.println("\n3) Grouped by length: " + lengthMap);
 
 
-                // 4. First Non-Repeating Character
+                // 15. First Non-Repeating Character
                 String text4 = "swiss";
                 HashMap<Character, Integer> freq4 = new HashMap<>();
 
@@ -219,7 +219,7 @@ public class Main {
                         (firstUnique == null ? "None" : firstUnique));
 
 
-                // 5. Two-Sum (Index Map)
+                // 16. Two-Sum (Index Map)
                 int[] nums5 = {2, 7, 11, 15};
                 int target5 = 9;
                 HashMap<Integer, Integer> indexMap = new HashMap<>();
@@ -235,7 +235,7 @@ public class Main {
                 }
 
 
-                // 6. Detect Duplicates with Map
+                // 17. Detect Duplicates with Map
                 String[] arr6 = {"apple","banana","apple","orange","banana","kiwi"};
                 HashMap<String, Integer> freq6 = new HashMap<>();
 
@@ -258,7 +258,7 @@ public class Main {
                 }
 
 
-                // 7. Equals & Order-Insensitivity
+                // 18. Equals & Order-Insensitivity
                 HashMap<String,Integer> mapA = new HashMap<>();
                 mapA.put("A",1);
                 mapA.put("B",2);
@@ -271,7 +271,7 @@ public class Main {
                 System.out.println("HashCodes: " + mapA.hashCode() + " , " + mapB.hashCode());
 
 
-                // 8. Remove Entries Conditionally
+                // 19. Remove Entries Conditionally
                 HashMap<String,Integer> mapp = new HashMap<>();
                 mapp.put("Aida",75);
                 mapp.put("Azat",50);
@@ -287,7 +287,7 @@ public class Main {
                 System.out.println("\n8) After removing <60: " + mapp);
 
 
-                // 9. Merge Scores
+                // 20. Merge Scores
                 HashMap<String,Integer> scores1 = new HashMap<>();
                 scores1.put("Aida",40);
                 scores1.put("Azat",35);
@@ -304,7 +304,7 @@ public class Main {
                 System.out.println("\n9) Merged scores: " + scores1);
 
 
-                // 10. Invert a Map (Handling Collisions)
+                // 21. Invert a Map (Handling Collisions)
                 HashMap<String,Integer> studentScore = new HashMap<>();
                 studentScore.put("Aida",90);
                 studentScore.put("Azat",80);
@@ -319,7 +319,7 @@ public class Main {
                 System.out.println("\n10) Inverted map: " + inverted);
 
 
-                // 11. Top-2 Frequent Words
+                // 22. Top-2 Frequent Words
                 String text11 = "java is fun java is cool java is powerful";
                 String[] words11 = text11.split(" ");
                 HashMap<String,Integer> freq11 = new HashMap<>();
