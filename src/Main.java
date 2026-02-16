@@ -5,118 +5,118 @@ public class Main {
     public static void main(String[] args) {
 
         // 1. Create & Put
-        HashMap<String, Integer> map1 = new HashMap<>();
-        map1.put("Aida", 85);
-        map1.put("Azat", 92);
-        map1.put("Dana", 77);
-        System.out.println("1) " + map1);
-        System.out.println("Size: " + map1.size());
+        HashMap<String, Integer> m1 = new HashMap<>();
+        m1.put("Aida", 85);
+        m1.put("Azat", 92);
+        m1.put("Dana", 79);
+        System.out.println("1. " + m1);
+        System.out.println("size: " + m1.size());
 
 
         // 2. Get & ContainsKey
-        HashMap<String, Integer> map2 = new HashMap<>();
-        map2.put("Aida", 85);
-        map2.put("Azat", 92);
-        map2.put("Dana", 77);
+        HashMap<String, Integer> m2 = new HashMap<>();
+        m2.put("Aida", 85);
+        m2.put("Azat", 92);
+        m2.put("Dana", 77);
 
-        System.out.println("\n2) Get Aida: " + map2.get("Aida"));
-        System.out.println("Get Mira: " + map2.get("Mira"));
+        System.out.println("\n2) get Aida: " + m2.get("Aida"));
+        System.out.println("get Mira: " + m2.get("Mira"));
 
-        if (map2.containsKey("Mira")) {
+        if (m2.containsKey("Mira")) {
             System.out.println("Mira found");
         } else {
-            System.out.println("Mira not found");
+            System.out.println("Mira n. found");
         }
 
 
         // 3. Update Existing Value
-        HashMap<String, Integer> map3 = new HashMap<>();
-        map3.put("Aida", 85);
-        map3.put("Azat", 92);
-        map3.put("Dana", 77);
+        HashMap<String, Integer> m3 = new HashMap<>();
+        m3.put("Aida", 85);
+        m3.put("Azat", 92);
+        m3.put("Dana", 77);
 
-        Integer old = map3.put("Dana", 80);
-        System.out.println("\n3) Old Dana score: " + old);
-        System.out.println("Updated map: " + map3);
+        Integer old = m3.put("Dana", 80);
+        System.out.println("\n3) old Dana score: " + old);
+        System.out.println("updated map: " + m3);
 
 
         // 4. Remove by Key
-        HashMap<String, Integer> map4 = new HashMap<>();
-        map4.put("Aida", 85);
-        map4.put("Azat", 92);
-        map4.put("Dana", 77);
+        HashMap<String, Integer> m4 = new HashMap<>();
+        m4.put("Aida", 85);
+        m4.put("Azat", 92);
+        m4.put("Dana", 77);
 
-        Integer removed = map4.remove("Azat");
+        Integer removed = m4.remove("Azat");
         System.out.println("\n4) Azat removed: " + (removed != null));
 
-        Integer removed2 = map4.remove("NonExisting");
-        System.out.println("NonExisting removed: " + (removed2 != null));
+        Integer removed2 = m4.remove("NonExisting");
+        System.out.println("NonExistin removed: " + (removed2 != null));
 
 
         // 5. isEmpty & clear
-        HashMap<String, Integer> map5 = new HashMap<>();
-        map5.put("Aida", 85);
-        map5.put("Dana", 80);
+        HashMap<String, Integer> m5 = new HashMap<>();
+        m5.put("Aida", 85);
+        m5.put("Dana", 80);
 
-        System.out.println("\n5) Is empty before clear: " + map5.isEmpty());
-        map5.clear();
-        System.out.println("Is empty after clear: " + map5.isEmpty());
+        System.out.println("\n5) Is emp before clear: " + m5.isEmpty());
+        m5.clear();
+        System.out.println("is empty after clear: " + m5.isEmpty());
 
 
         // 6. getOrDefault
-        HashMap<String, Integer> map6 = new HashMap<>();
-        map6.put("Aida", 85);
-        map6.put("Dana", 80);
+        HashMap<String, Integer> m6 = new HashMap<>();
+        m6.put("Aida", 85);
+        m6.put("Dana", 80);
 
-        int score1 = map6.getOrDefault("Aida", -1);
-        int score2 = map6.getOrDefault("Mira", -1);
+        int sc1 = m6.getOrDefault("Aida", -1);
+        int sc2 = m6.getOrDefault("Mira", -1);
 
-        System.out.println("\n6) Aida: " + (score1 == -1 ? "Not found" : score1));
-        System.out.println("Mira: " + (score2 == -1 ? "Not found" : score2));
+        System.out.println("\n6) Aida: " + (sc1 == -1 ? "not found" : sc1));
+        System.out.println("Mira: " + (sc2 == -1 ? "not found" : sc2));
 
 
         // 7. putIfAbsent
-        HashMap<String, Integer> map7 = new HashMap<>();
-        map7.put("Aida", 85);
+        HashMap<String, Integer> m7 = new HashMap<>();
+        m7.put("Aida", 85);
 
-        map7.putIfAbsent("Aida", 90);   // keeps 85
-        map7.putIfAbsent("Mira", 88);   // inserts 88
+        m7.putIfAbsent("Aida", 90);   // keeps 85
+        m7.putIfAbsent("Mira", 88);   // inserts 88
 
-        System.out.println("\n7) " + map7);
+        System.out.println("\n7) " + m7);
 
 
         // 8. replace
-        HashMap<String, Integer> map8 = new HashMap<>();
-        map8.put("Aida", 85);
+        HashMap<String, Integer> m8 = new HashMap<>();
+        m8.put("Aida", 85);
 
-        boolean condReplace = map8.replace("Aida", 85, 86);
-        System.out.println("\n8) Conditional replace success: " + condReplace);
+        boolean condReplace = m8.replace("Aida", 85, 86);
+        System.out.println("\n8) condi replase success: " + condReplace);
 
-        Integer uncondReplace = map8.replace("Aida", 91);
-        System.out.println("Unconditional replace old value: " + uncondReplace);
+        Integer uncondReplace = m8.replace("Aida", 91);
+        System.out.println("Uncondi replase old value: " + uncondReplace);
 
-        Integer replaceMissing = map8.replace("Unknown", 100);
-        System.out.println("Replace missing key: " + replaceMissing);
+        Integer replaceMissing = m8.replace("Unknown", 100);
+        System.out.println("replace missing key: " + replaceMissing);
 
 
         // 9. Iterate keys, values, entries
-        HashMap<String, Integer> map9 = new HashMap<>();
-        map9.put("Aida", 85);
-        map9.put("Dana", 80);
-        map9.put("Timur", 90);
+        HashMap<String, Integer> m9 = new HashMap<>();
+        m9.put("Aida", 85);
+        m9.put("Dana", 80);
+        m9.put("Timur", 90);
 
-        System.out.println("\n9) Keys:");
-        for (String key : map9.keySet()) {
+        System.out.println("\n9) keys:");
+        for (String key : m9.keySet()) {
             System.out.println(key);
         }
 
         System.out.println("Values:");
-        for (Integer value : map9.values()) {
+        for (Integer value : m9.values()) {
             System.out.println(value);
         }
 
         System.out.println("Entries:");
-        for (Map.Entry<String, Integer> entry : map9.entrySet()) {
+        for (Map.Entry<String, Integer> entry : m9.entrySet()) {
             System.out.println(entry.getKey() + " = " + entry.getValue());
         }
 
@@ -149,23 +149,23 @@ public class Main {
             }
         }
 
-        System.out.println("\n11) Max score: " + max);
-        System.out.println("Student(s) with max:");
+        System.out.println("\n11. Max score: " + max);
+        System.out.println("Student with max:");
         for (Map.Entry<String, Integer> entry : map11.entrySet()) {
             if (entry.getValue() == max) {
                 System.out.println(entry.getKey());
-
+}}
 
 
                 // 12. Word Frequency Counter
-                String text1 = "Java is fun and Java is powerful and fun";
+                String text1 = "Java is fun and Java is interesting and fun";
                 String[] words1 = text1.toLowerCase().split(" ");
                 HashMap<String, Integer> wordFreq = new HashMap<>();
 
                 for (String w : words1) {
                     wordFreq.put(w, wordFreq.getOrDefault(w, 0) + 1);
                 }
-                System.out.println("1) Word frequency: " + wordFreq);
+                System.out.println("12. word freguency: " + wordFreq);
 
 
                 // 13. Character Frequency (letters only)
@@ -177,7 +177,7 @@ public class Main {
                         charFreq.put(c, charFreq.getOrDefault(c, 0) + 1);
                     }
                 }
-                System.out.println("\n2) Character frequency: " + charFreq);
+                System.out.println("\n13. Characer frequency: " + charFreq);
 
                 char maxChar = 0;
                 int maxCount = 0;
@@ -187,17 +187,17 @@ public class Main {
                         maxChar = e.getKey();
                     }
                 }
-                System.out.println("Most frequent char: " + maxChar);
+                System.out.println("most frequent char: " + maxChar);
 
 
                 // 14. Group Words by Length
-                String[] arr3 = {"hi","book","java","sun","loop","map"};
+                String[] arr3 = {"hi","book","samira","sun","loop","map"};
                 HashMap<Integer, ArrayList<String>> lengthMap = new HashMap<>();
 
                 for (String w : arr3) {
                     lengthMap.computeIfAbsent(w.length(), k -> new ArrayList<>()).add(w);
                 }
-                System.out.println("\n3) Grouped by length: " + lengthMap);
+                System.out.println("\n14 grouped by length: " + lengthMap);
 
 
                 // 15. First Non-Repeating Character
@@ -215,8 +215,8 @@ public class Main {
                         break;
                     }
                 }
-                System.out.println("\n4) First non-repeating: " +
-                        (firstUnique == null ? "None" : firstUnique));
+                System.out.println("\n15 first non-repeating: " +
+                        (firstUnique == null ? "none" : firstUnique));
 
 
                 // 16. Two-Sum (Index Map)
@@ -227,7 +227,7 @@ public class Main {
                 for (int i = 0; i < nums5.length; i++) {
                     int complement = target5 - nums5[i];
                     if (indexMap.containsKey(complement)) {
-                        System.out.println("\n5) Two sum indices: " +
+                        System.out.println("\n16. Two sum indices: " +
                                 indexMap.get(complement) + ", " + i);
                         break;
                     }
@@ -236,14 +236,14 @@ public class Main {
 
 
                 // 17. Detect Duplicates with Map
-                String[] arr6 = {"apple","banana","apple","orange","banana","kiwi"};
+                String[] arr6 = {"apple","banana","apple","orang","banana","kiwi"};
                 HashMap<String, Integer> freq6 = new HashMap<>();
 
                 for (String s : arr6) {
                     freq6.put(s, freq6.getOrDefault(s, 0) + 1);
                 }
 
-                System.out.println("\n6) Unique items:");
+                System.out.println("\n17. Unique items:");
                 for (Map.Entry<String, Integer> e : freq6.entrySet()) {
                     if (e.getValue() == 1) {
                         System.out.println(e.getKey());
@@ -267,7 +267,7 @@ public class Main {
                 mapB.put("B",2);
                 mapB.put("A",1);
 
-                System.out.println("\n7) Equals: " + mapA.equals(mapB));
+                System.out.println("\n18) Equals: " + mapA.equals(mapB));
                 System.out.println("HashCodes: " + mapA.hashCode() + " , " + mapB.hashCode());
 
 
@@ -284,7 +284,7 @@ public class Main {
                         it.remove();
                     }
                 }
-                System.out.println("\n8) After removing <60: " + mapp);
+                System.out.println("\n19 After removing <60: " + mapp);
 
 
                 // 20. Merge Scores
@@ -301,7 +301,7 @@ public class Main {
                 for (Map.Entry<String,Integer> e : scores2.entrySet()) {
                     scores1.merge(e.getKey(), e.getValue(), Integer::sum);
                 }
-                System.out.println("\n9) Merged scores: " + scores1);
+                System.out.println("\n20. Merged scores: " + scores1);
 
 
                 // 21. Invert a Map (Handling Collisions)
@@ -316,7 +316,7 @@ public class Main {
                     inverted.computeIfAbsent(e.getValue(),
                             k -> new ArrayList<>()).add(e.getKey());
                 }
-                System.out.println("\n10) Inverted map: " + inverted);
+                System.out.println("\n21.) Inverted map: " + inverted);
 
 
                 // 22. Top-2 Frequent Words
@@ -333,12 +333,10 @@ public class Main {
 
                 list.sort((a,b) -> b.getValue() - a.getValue());
 
-                System.out.println("\n11) Top 2 frequent:");
+                System.out.println("\n22. Top 2 frequent:");
                 for (int i = 0; i < Math.min(2, list.size()); i++) {
                     System.out.println(list.get(i).getKey() +
                             " = " + list.get(i).getValue());
                 }
             }
         }
-    }
-}
